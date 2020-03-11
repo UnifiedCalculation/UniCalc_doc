@@ -1,6 +1,8 @@
 \documentclass[journal]{combine}
 
-\usepackage{csquotes}
+
+\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{tikz-uml}
 
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 
@@ -104,7 +106,7 @@
 	
 	\newpage
 	\section{Arbeits- / Materialprotokoll  - \emph{casual}}
-		\emph{Satndardszenario:} \\
+		\emph{Standardszenario:} \\
 		Der Ausführende Arbeiter akzeptiert die vorgeschlagenen Aufwände für Material
 		und Zeit. Das System speichert die Einträge ab.\\
 		\emph{Alternatives Szenario I:}\\
@@ -116,11 +118,19 @@
 	\newpage
 	\section{Schlussrechnung erstellen - \emph{brief}}
 		Der Nutzer öffnet die Offerte, die Material- und Arbeitsaufwände hat,
-		die zu einer Schlussrechnung werden soll. Die Applikation führt den User durch
-		unstimmigkeiten und fordert den User auf, einen Input vorzunehmen. Das System
-		speichert allfällige änderungen ab. Der User kann die bearbeitung abschliessen.
-		Das System markiert entsprechend die Offerte als final. Der User kann eine Datei der 
+		die zu einer Schlussrechnung werden soll. Die Applikation führt den Verkäufer durch
+		unstimmigkeiten und fordert ihn auf, eine Eingabe vorzunehmen. Das System
+		speichert allfällige Änderungen ab. Der Verkäufer kann die bearbeitung abschliessen.
+		Das System markiert danach die Offerte als final. Der Verkäufer kann eine Datei der 
 		Schlussrechnung laden.
+
+	\newpage
+	\section{Anwendungsfalldiagramm 1}
+	\begin{tikzpicture}
+		\umlactor[x=-1]{A}
+		\umlactor[x=1]{B} 
+		\umlassoc{A}{B}
+	 \end{tikzpicture}
 
 
 \end{document}

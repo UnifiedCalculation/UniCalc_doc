@@ -287,3 +287,5 @@ TSWLatexianTemp*
 
 ### ignoring .env files ###
 *.env
+Artefakte/__latexindent_temp.tex
+Artefakte/__latexindent_temp.tex
