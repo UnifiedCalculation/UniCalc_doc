@@ -1,6 +1,5 @@
 \documentclass[journal]{combine}
 
-% !TeX spellcheck = de_DE 
 \usepackage{csquotes}
 
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
@@ -32,7 +31,7 @@
 			NPK und Firmenangebot erstellt wird.
 			\item[Endkunde:]\hfill \\Möchte das die erhaltene Offerte 
 			übersichtlich ist und gemäss NPK.
-			\item[Mitarbeiter:]\hfill \\Möchte eine detailierte Auflistung der
+			\item[Mitarbeiter:]\hfill \\Möchte eine detaillierte Auflistung der
 			offerierten Arbeit und des Materials.  
 		\end{description}
 		\item[Precondition:] \hfill \\Verkäufer ist eingeloggt, Projekt existiert. 
@@ -40,29 +39,66 @@
 		werden richtig kalkuliert. Offerte kann als PDF ausgedruckt werden. 
 		\item[Main Success Scenario:] \hfill  
 		\begin{enumerate}
-			\item Der Verkäufer wählt das Projekt, indem er eine
-			 neue Offerte erstellen möchte.
-			\item Der Verkäufer startet den Prozess zur erstellung einer neuen Offerte.
-			\item Der Verkäufer definiert einen Titel für die Offerte.
-			\item Der Verkäufer fügt vordefinierte Aufwände und Materialen
-			zur Offerte hinzu.
-			\item Der Verkäufer kann einen Rabatt auf einzelne Position definieren.
-			\item Der Verkäufer terminiert die erstellung
-			\item Der Verkäufer erhält einen Ausdruck
+			\item Der Verkäufer fügt dem angewählten Projekt eine neue Offerte hinzu.
+			\item Das System startet den Prozess für die erstellung einer neuen Offerte und
+			verlangt vom Verkäufer einen Titel sowie eine Auswahl aus angegebenen Baubranchen
+			\item Der Verkäufer gibt einen Titel sowie die entsprechende Baubranche an
+			\item Das System erstellt und speichert eine neue Offerte mit dem 
+				angegebenen Titel
+			\item Der Verkäufer fügt dem Projekt einen Standardisierten Artikel hinzu
+			\item Das System informiert den Verkäufer über die existierenden Artikel
+			\item Der Verkäufer wählt ein Artikel aus, gibt die Stückzahl an sowie 
+			denn allfälligen Rabatt
+			\item Das System fügt der Offerte den Artikel hinzu mitsamt allen angegebenen Daten\\
+			\emph{Die Schritte 5 - 8 können beliebig oft wiederholt werden}
+			\item Der Verkäufer fügt dem Projekt einen manuellen Artikel hinzu
+			\item Das System fragt den Verkäufer, ob er einen existierenden manuellen Artikel hinzufügen 
+			oder einen neuen erstellen möchte
+			\item Der Verkäufer möchte einen existierenden manuellen Artikel hinzufügen
+			\item Das System informiert den Verkäufer über existierende Manuelle Artikel
+			\item Der Verkäufer wählt einen manuellen Artikel aus, gibt die Stückzahl an sowie 
+			denn allfälligen Rabatt
+			\item Das System fügt der Offerte den Artikel hinzu mitsamt allen angegebenen Daten\\
+			\emph{Die Schritte 9 - 14 können beliebig oft wiederholt werden}
+			\item Der Verkäufer schliesst die Offertenerstellung abschliessen
+			\item Das System speicher die Daten und berechnet ein Total für die Offerte
+			\item Der Verkäufer bekommt die Offerte als Datei
 		\end{enumerate}
 		\newpage
 		\item[Extensions:] \hfill  
 		\begin{enumerate}
-			\item [*a.] Das System speichert nach jeder Anpassung die aktuellen Daten
-			\item [*b.] Das System warnt bei fehlerhaften Daten
-			\item [*c.] Das System kalkuliert den Totalbetrag
-			\item [4a.] Der Verkäufer möchte einen manuellen Eintrag erstellen
+			\item [4.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{2} zurück.
+			\item [8.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{5} zurück
+			\item [11.a] Der Verkäufer möchte einen neuen manuellen Artikel hinzufügen
 			\begin{enumerate}
-				\item[1.] Der Verkäufer starter die Prozedur für das Einfügen
-				manueller Daten
-				\item[2.] Der Verkäufer gibt die Daten ein
-				\item[3.] Das System speichert die Daten ab
+				\item[1.] Das System startet den Prozess für die erstellung eines neuen manuellen Artikels
+				und informiert den Verkäufer über die möglichen Typen eines manuellen Artikels
+				\item[2.a] Der Verkäufer wählt den Typen \emph{Text}
+				\begin{enumerate}
+					\item[1.] Das System verlangt vom Verkäufer einen Text
+					\item[2.] Der Verkäufer gibt den Text an
+				\end{enumerate}
+				\item[2.b] Der Verkäufer wählt den Typen \emph{Produkt}
+				\begin{enumerate}
+					\item[1.] Das System verlangt vom Verkäufer einen Namen, eine Beschreibung,
+					das Mengenformat sowie einen Preis
+					\item[2.] Der Verkäufer gibt einen Namen, eine Beschreibung, den Mengenformat
+					sowie den Preis an
+				\end{enumerate} 
+				\item[3.] Das System speichert die angegebenen Angaben als neuen manuellen Artikel
+				und fügt diesen der Offerte hinzu.
+				\begin{enumerate}
+					\item [1.] Das System meldet bei falscher Formatierung, fehlenden Daten
+					oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{11.a.1} zurück
+				\end{enumerate} 
 			\end{enumerate}
+			\item [14.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{9} zurück
+			\item [16.a] Das System meldet bei Speicher-  oder Verbindungsproblemen
+			dies dem Verkäufer und speichert eine lokale Kopie der Dateien und geht danach
+			zu Punkt \emph{16} zurück.
 		\end{enumerate}
 	\end{description}
 	
@@ -73,7 +109,7 @@
 		und Zeit. Das System speichert die Einträge ab.\\
 		\emph{Alternatives Szenario I:}\\
 		Der Ausführende passt die vorgeschlagenen Aufwände für Material und Zeit an.
-		Das System speichert diese angepassten Einträge separat ab.
+		Das System speichert diese angepassten Einträge separat ab.\\	
 		\emph{Alternatives Szenario II:}\\
 		Der Ausführende möchte nicht aufgelistete Aufwände selber hinzufügen. Er kann neue
 		Einträge für Zeit- und Materialaufwände hinzufügen. Das System speichert diese separat ab.
