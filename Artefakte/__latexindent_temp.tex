@@ -1,7 +1,9 @@
 \documentclass[journal]{combine}
 
-% !TeX spellcheck = de_DE 
-\usepackage{csquotes}
+
+\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{tikz-uml}
+\usepackage[utf8]{inputenc}
 
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 
@@ -24,45 +26,168 @@
 		\item[Scope:] \hfill  \\Offerttool
 		\item[Level:] \hfill \\User goal
 		\item[Primary Actor:] \hfill \\Verkäufer
-		\item[Stakeholders and Interests:]
-		\begin{description}]
+		\item[Stakeholders and Interests:] \hfill 
+		\begin{description}
 			\item[Verkäufer:]\hfill \\Möchte effiziente, fehlerfreie Eingabefunktionalität 
 			für die Offertenerstellung.
 			\item[Firma:]\hfill \\Möchte das die Offerteneinträge gemäss 
 			NPK und Firmenangebot erstellt wird.
 			\item[Endkunde:]\hfill \\Möchte das die erhaltene Offerte 
 			übersichtlich ist und gemäss NPK.
-			\item[Mitarbeiter:]\hfill \\Möchte eine detailierte Auflistung der
+			\item[Mitarbeiter:]\hfill \\Möchte eine detaillierte Auflistung der
 			offerierten Arbeit und des Materials.  
 		\end{description}
-		\textbf{Precondition:} Verkäufer ist eingeloggt, Projekt existiert. \\
-		\textbf{Success Guarantee :} Offerte ist gespeichert. Beträge
-		werden richtig kalkuliert. Offerte kann als PDF ausgedruckt werden. \\
-		\textbf{Main Success Scenario:} 
+		\item[Precondition:] \hfill \\Verkäufer ist eingeloggt, Projekt existiert. 
+		\item[Success Guarantee :] \hfill \\Offerte ist gespeichert. Beträge
+		werden richtig kalkuliert. Offerte kann als PDF ausgedruckt werden. 
+		\item[Main Success Scenario:] \hfill  
 		\begin{enumerate}
-			\item 
+			\item Der Verkäufer fügt dem angewählten Projekt eine neue Offerte hinzu.
+			\item Das System startet den Prozess für die erstellung einer neuen Offerte und
+			verlangt vom Verkäufer einen Titel sowie eine Auswahl aus angegebenen Baubranchen
+			\item Der Verkäufer gibt einen Titel sowie die entsprechende Baubranche an
+			\item Das System erstellt und speichert eine neue Offerte mit dem 
+				angegebenen Titel
+			\item Der Verkäufer fügt der Offerte einen Standardisierten Artikel hinzu
+			\item Das System informiert den Verkäufer über die existierenden Artikel
+			\item Der Verkäufer wählt ein Artikel aus, gibt die Stückzahl an sowie 
+			denn allfälligen Rabatt
+			\item Das System fügt der Offerte den Artikel hinzu mitsamt allen angegebenen Daten\\
+			\emph{Die Schritte 5 - 8 können beliebig oft wiederholt werden}
+			\item Der Verkäufer fügt dem Projekt einen manuellen Artikel hinzu
+			\item Das System fragt den Verkäufer, ob er einen existierenden manuellen Artikel hinzufügen 
+			oder einen neuen erstellen möchte
+			\item Der Verkäufer möchte einen existierenden manuellen Artikel hinzufügen
+			\item Das System informiert den Verkäufer über existierende Manuelle Artikel
+			\item Der Verkäufer wählt einen manuellen Artikel aus, gibt die Stückzahl an sowie 
+			denn allfälligen Rabatt
+			\item Das System fügt der Offerte den Artikel hinzu mitsamt allen angegebenen Daten\\
+			\emph{Die Schritte 9 - 14 können beliebig oft wiederholt werden}
+			\item Der Verkäufer schliesst die Offertenerstellung abschliessen
+			\item Das System speicher die Daten und berechnet ein Total für die Offerte
+		\end{enumerate}
+		\newpage
+		\item[Extensions:] \hfill  
+		\begin{enumerate}
+			\item [4.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{2} zurück.
+			\item [8.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{5} zurück
+			\item [11.a] Der Verkäufer möchte einen neuen manuellen Artikel hinzufügen
+			\begin{enumerate}
+				\item[1.] Das System startet den Prozess für die erstellung eines neuen manuellen Artikels
+				und informiert den Verkäufer über die möglichen Typen eines manuellen Artikels
+				\item[2.a] Der Verkäufer wählt den Typen \emph{Text}
+				\begin{enumerate}
+					\item[1.] Das System verlangt vom Verkäufer einen Text
+					\item[2.] Der Verkäufer gibt den Text an
+				\end{enumerate}
+				\item[2.b] Der Verkäufer wählt den Typen \emph{Produkt}
+				\begin{enumerate}
+					\item[1.] Das System verlangt vom Verkäufer einen Namen, eine Beschreibung,
+					das Mengenformat sowie einen Preis
+					\item[2.] Der Verkäufer gibt einen Namen, eine Beschreibung, den Mengenformat
+					sowie den Preis an
+				\end{enumerate} 
+				\item[3.] Das System speichert die angegebenen Angaben als neuen manuellen Artikel
+				und fügt diesen der Offerte hinzu.
+				\begin{enumerate}
+					\item [1.] Das System meldet bei falscher Formatierung, fehlenden Daten
+					oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{11.a.1} zurück
+				\end{enumerate} 
+			\end{enumerate}
+			\item [14.a] Das System meldet bei falscher Formatierung, fehlenden Daten
+			oder Speicherproblemen dies dem Verkäufer und geht zu Punkt \emph{9} zurück
+			\item [16.a] Das System meldet bei Speicher-  oder Verbindungsproblemen
+			dies dem Verkäufer und speichert eine lokale Kopie der Dateien und geht danach
+			zu Punkt \emph{16} zurück.
 		\end{enumerate}
 	\end{description}
 	
 	\newpage
 	\section{Arbeits- / Materialprotokoll  - \emph{casual}}
-		\emph{Satndardszenario:} \\
+		\emph{Standardszenario:} \\
 		Der Ausführende Arbeiter akzeptiert die vorgeschlagenen Aufwände für Material
 		und Zeit. Das System speichert die Einträge ab.\\
 		\emph{Alternatives Szenario I:}\\
 		Der Ausführende passt die vorgeschlagenen Aufwände für Material und Zeit an.
-		Das System speichert diese angepassten Einträge separat ab.
+		Das System speichert diese angepassten Einträge separat ab.\\	
 		\emph{Alternatives Szenario II:}\\
 		Der Ausführende möchte nicht aufgelistete Aufwände selber hinzufügen. Er kann neue
 		Einträge für Zeit- und Materialaufwände hinzufügen. Das System speichert diese separat ab.
 	\newpage
 	\section{Schlussrechnung erstellen - \emph{brief}}
 		Der Nutzer öffnet die Offerte, die Material- und Arbeitsaufwände hat,
-		die zu einer Schlussrechnung werden soll. Die Applikation führt den User durch
-		unstimmigkeiten und fordert den User auf, einen Input vorzunehmen. Das System
-		speichert allfällige änderungen ab. Der User kann die bearbeitung abschliessen.
-		Das System markiert entsprechend die Offerte als final. Der User kann eine Datei der 
+		die zu einer Schlussrechnung werden soll. Die Applikation führt den Verkäufer durch
+		unstimmigkeiten und fordert ihn auf, eine Eingabe vorzunehmen. Das System
+		speichert allfällige Änderungen ab. Der Verkäufer kann die bearbeitung abschliessen.
+		Das System markiert danach die Offerte als final. Der Verkäufer kann eine Datei der 
 		Schlussrechnung laden.
+
+	\newpage
+	\section{Anwendungsfalldiagramm}
+	\begin{tikzpicture}
+		\begin{umlsystem}[x=7, fill=red!10]{UniCalc}
+			\umlusecase[fill=green!20]{Offerte im Projekt erstellen}
+			\umlusecase[y=-2, fill=green!20]{Schlussrechnung erstellen}
+			\umlusecase[y=-4, fill=green!20]{Arbeits- / Materialprotokoll}
+		\end{umlsystem}
+
+		\umlactor{Verkaeufer}
+		\umlactor[y=-3]{Mitarbeiter}
+
+		\umlassoc{Verkaeufer}{usecase-1}
+		\umlassoc{Verkaeufer}{usecase-2}
+		\umlassoc{Mitarbeiter}{usecase-3}
+
+	\end{tikzpicture}
+
+	\newpage
+	\section{System-Sequenz-Diagramm}
+	\begin{tikzpicture}
+		\begin{umlseqdiag}
+			\umlactor[class=Verkaeufer]{A}
+			\umlobject[class=System, x=10]{B}
+			\begin{umlcall}[op={Fügt ausgewählten Projekt Offerte hinzu}]{A}{B}
+			\begin{umlcall}[op={Fragt nach Titel sowie Baubranche}]{B}{A}
+			\end{umlcall}
+		\end{umlcall}
+			\begin{umlcall}[op={Gibt Titel und Baubranche an}]{A}{B}
+			\begin{umlcall}[op={Erstellt neue Offerte mit Titel und Baubranche}]{B}{A}
+			\end{umlcall}
+		\end{umlcall}
+			\begin{umlcall}[op={Fügt der Offerte einen Standartisierten Artikel hinzu}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Informiert über existierende Artikel}]{B}{A}
+			\end{umlcall}
+
+			\begin{umlcall}[op={Wählt Artikel aus mit Stückzahl und Rabatt}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Fügt Artikel mit Stückzahl und Rabatt der Offerte hinzu}]{B}{A}
+			\end{umlcall}
+
+			\begin{umlcall}[op={Fügt der Offerte einen manuellen Artikel hinzu}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Fragt ob neuer oder existierender manueller Artikel}]{B}{A}
+			\end{umlcall}
+
+			\begin{umlcall}[op={Wählt die Option existierender manueller Artikel}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Informiert über existierende manuelle Artikel}]{B}{A}
+			\end{umlcall}
+
+			\begin{umlcall}[op={Wählt manuellen Artikel aus mit Stückzahl und Rabatt}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Fügt manuellen Artikel mit Stückzahl und Rabatt hinzu}]{B}{A}
+			\end{umlcall}
+
+			\begin{umlcall}[op={Schliesst die Offertenerstellung ab}]{A}{B}
+			\end{umlcall}
+			\begin{umlcall}[op={Speichert Daten und berechnet Total}]{B}{A}
+			\end{umlcall}
+
+		\end{umlseqdiag}
+	\end{tikzpicture}
 
 
 \end{document}

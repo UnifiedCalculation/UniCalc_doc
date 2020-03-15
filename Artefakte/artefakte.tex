@@ -1,8 +1,11 @@
-\documentclass[journal]{combine}
+\documentclass[a4paper,12pt]{article}
 
 
-\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{fullpage}
 \usepackage{tikz-uml}
+\usepackage[utf8]{inputenc}
+
+\nonstopmode
 
 \renewcommand{\contentsname}{Inhaltsverzeichnis}
 
@@ -47,7 +50,7 @@
 			\item Der Verkäufer gibt einen Titel sowie die entsprechende Baubranche an
 			\item Das System erstellt und speichert eine neue Offerte mit dem 
 				angegebenen Titel
-			\item Der Verkäufer fügt dem Projekt einen Standardisierten Artikel hinzu
+			\item Der Verkäufer fügt der Offerte einen Standardisierten Artikel hinzu
 			\item Das System informiert den Verkäufer über die existierenden Artikel
 			\item Der Verkäufer wählt ein Artikel aus, gibt die Stückzahl an sowie 
 			denn allfälligen Rabatt
@@ -64,7 +67,6 @@
 			\emph{Die Schritte 9 - 14 können beliebig oft wiederholt werden}
 			\item Der Verkäufer schliesst die Offertenerstellung abschliessen
 			\item Das System speicher die Daten und berechnet ein Total für die Offerte
-			\item Der Verkäufer bekommt die Offerte als Datei
 		\end{enumerate}
 		\newpage
 		\item[Extensions:] \hfill  
@@ -125,12 +127,66 @@
 		Schlussrechnung laden.
 
 	\newpage
-	\section{Anwendungsfalldiagramm 1}
+	\section{Anwendungsfalldiagramm}
+	\begin{center}
 	\begin{tikzpicture}
-		\umlactor[x=-1]{A}
-		\umlactor[x=1]{B} 
-		\umlassoc{A}{B}
-	 \end{tikzpicture}
+		\begin{umlsystem}[x=7, fill=red!10]{UniCalc}
+			\umlusecase[fill=green!20]{Offerte im Projekt erstellen}
+			\umlusecase[y=-2, fill=green!20]{Schlussrechnung erstellen}
+			\umlusecase[y=-4, fill=green!20]{Arbeits- / Materialprotokoll}
+		\end{umlsystem}
 
+		\umlactor{Verkaeufer}
+		\umlactor[y=-3]{Mitarbeiter}
+
+		\umlassoc{Verkaeufer}{usecase-1}
+		\umlassoc{Verkaeufer}{usecase-2}
+		\umlassoc{Mitarbeiter}{usecase-3}
+	\end{tikzpicture}
+	\end{center}
+
+	\newpage
+	\section{System-Sequenz-Diagramm - Offerte im Projekt erstellen}
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{umlseqdiag}
+		\umlactor{Verkaeufer}
+		\umlobject[x=10]{System}
+		\begin{umlcall}[op={Fügt ausgewählten Projekt Offerte hinzu}]{Verkaeufer}{System}
+			
+		\begin{umlcall}[op={Fragt nach Titel sowie Baubranche}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Gibt Titel und Baubranche an}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Erstellt neue Offerte mit Titel und Baubranche}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Fügt der Offerte einen Standartisierten Artikel hinzu}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Informiert über existierende Artikel}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Wählt Artikel aus mit Stückzahl und Rabatt}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Fügt Artikel mit Stückzahl und Rabatt der Offerte hinzu}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Fügt der Offerte einen manuellen Artikel hinzu}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Fragt ob neuer oder existierender manueller Artikel}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Wählt die Option existierender manueller Artikel}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Informiert über existierende manuelle Artikel}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Wählt manuellen Artikel aus mit Stückzahl und Rabatt}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Fügt manuellen Artikel mit Stückzahl und Rabatt hinzu}]{System}{Verkaeufer}
+			\begin{umlcall}[op={Schliesst die Offertenerstellung ab}]{Verkaeufer}{System}
+			\begin{umlcall}[op={Speichert Daten und berechnet Total}]{System}{Verkaeufer}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+			\end{umlcall}
+        \end{umlcall}
+		\end{umlseqdiag}
+	\end{tikzpicture}
+\end{center}
 
 \end{document}
