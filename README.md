@@ -14,6 +14,7 @@ There is an easy way of using LaTeX on windows for the documentation. The follow
    - Settings -> Tab Directories
    - Click the "+"
    - Add the folder "UniCalc_doc\Artefakte\tikz-uml files
+   - User Guide can be found [here](https://perso.ensta-paris.fr/~kielbasi/tikzuml/var/files/html/web-tikz-uml-userguide.html)
 
 **Always make sure to keep MikTex updated!**
 
