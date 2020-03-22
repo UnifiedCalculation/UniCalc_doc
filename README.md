@@ -23,3 +23,20 @@ After installing these 3 components, you can download the [LaTeX Workshop](https
 To compile a *.tex file, hit **alt+ctrl+b**!
 
 You can find a template *.tex file in the following [folder](https://github.com/UnifiedCalculation/UniCalc_doc/tree/master/Template%20File)
+
+### ERM for the database
+
+Was built using draw.io and can be found [here](https://github.com/UnifiedCalculation/UniCalc_doc/blob/master/ERM.drawio)
+To open it up go to draw.io and select GitHub as source.
+
+
+### Domain model for the database
+
+Was built using draw.io and can be found [here](https://github.com/UnifiedCalculation/UniCalc_doc/blob/master/Domain%20model.drawio)
+To open it up go to draw.io and select GitHub as source.
+
+### Wireframe for UI Design
+
+The concepts for UI Design were made using PowerPoint and can be found here:
+ - Mobile: https://1drv.ms/p/s!Ag4nu1H8FHKmiL8JGMsa0tJfaYjMTg?e=Z7gxg0
+ - Desktop: https://1drv.ms/p/s!Ag4nu1H8FHKmiL8LyamVevU6AxBq1A?e=pzpJdi
