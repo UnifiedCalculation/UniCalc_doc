@@ -1,54 +1,57 @@
-<mxfile host="app.diagrams.net" modified="2020-03-24T10:17:03.124Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="UITfbj_pyq2befV4slOp" version="12.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-03-24T10:20:48.970Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="8OtIUfzK8FqfEcp9pv3E" version="12.9.1" type="github">
   <diagram id="VWcXcDjhsZNNLfSj0849" name="Page-1">
-    <mxGraphModel dx="919" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1838" dy="1596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="44" y="60" width="946" height="720" as="geometry" />
+        <mxCell id="EAAXSksqNvqR-IDibq6C-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="21" y="70" width="786" height="1010" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-2" value="Cloud (AWS/Azure?)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=21;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="370" y="170" width="170" height="20" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry width="786" height="686.0377358490566" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-4" value="&lt;b&gt;Java&amp;nbsp;&lt;/b&gt;&lt;b&gt;pdfGenerator&lt;/b&gt;&lt;br&gt;Isolated Microservice&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;" parent="1" vertex="1">
-          <mxGeometry x="617" y="250" width="253" height="120" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-2" value="Cloud (AWS/Azure?)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=21;fontStyle=1" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry x="270.8625792811839" y="104.81132075471699" width="141.24735729386893" height="19.056603773584907" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-8" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="810" width="460" height="310" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-4" value="&lt;b&gt;Java&amp;nbsp;&lt;/b&gt;&lt;b&gt;pdfGenerator&lt;/b&gt;&lt;br&gt;Isolated Microservice&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry x="476.08668076109933" y="181.03773584905662" width="210.20930232558138" height="114.33962264150944" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-6" value="ReactJS Frontend" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;align=center;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="479" y="890" width="140" height="70" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-8" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry x="221.0105708245243" y="714.622641509434" width="382.19873150105707" height="295.37735849056605" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-10" value="Client&lt;br&gt;Smartphone/Desktop" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=21;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="464" y="990" width="170" height="20" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-6" value="ReactJS Frontend" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;align=center;dashed=1;" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry x="361.4270613107822" y="790.8490566037736" width="116.32135306553911" height="66.69811320754717" as="geometry" />
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-11" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=21;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="0uubkKYT0Fda8_4WRpOy-6" target="0uubkKYT0Fda8_4WRpOy-5" edge="1">
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-10" value="Client&lt;br&gt;Smartphone/Desktop" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=2;fontSize=21;fontStyle=1" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1">
+          <mxGeometry x="348.9640591966173" y="886.1320754716982" width="141.24735729386893" height="19.056603773584907" as="geometry" />
+        </mxCell>
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-11" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=21;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="EAAXSksqNvqR-IDibq6C-1" source="0uubkKYT0Fda8_4WRpOy-6" target="0uubkKYT0Fda8_4WRpOy-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="140" y="590" as="sourcePoint" />
-            <mxPoint x="190" y="540" as="targetPoint" />
+            <mxPoint x="79.76321353065539" y="505" as="sourcePoint" />
+            <mxPoint x="121.30655391120507" y="457.35849056603774" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="549" y="770" />
-              <mxPoint x="430" y="770" />
+              <mxPoint x="419.5877378435518" y="676.5094339622642" />
+              <mxPoint x="320.71458773784354" y="676.5094339622642" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-12" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=21;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="0uubkKYT0Fda8_4WRpOy-5" target="0uubkKYT0Fda8_4WRpOy-4" edge="1">
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-12" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=21;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="EAAXSksqNvqR-IDibq6C-1" source="0uubkKYT0Fda8_4WRpOy-5" target="0uubkKYT0Fda8_4WRpOy-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="290" y="710" as="sourcePoint" />
-            <mxPoint x="275" y="460" as="targetPoint" />
+            <mxPoint x="204.39323467230443" y="619.3396226415094" as="sourcePoint" />
+            <mxPoint x="191.93023255813952" y="381.1320754716981" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0uubkKYT0Fda8_4WRpOy-15" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="290" y="280" width="280" height="300" as="geometry" />
+        <mxCell id="0uubkKYT0Fda8_4WRpOy-15" value="" style="group" parent="EAAXSksqNvqR-IDibq6C-1" vertex="1" connectable="0">
+          <mxGeometry x="204.39323467230443" y="209.62264150943398" width="232.64270613107823" height="285.8490566037736" as="geometry" />
         </mxCell>
         <mxCell id="0uubkKYT0Fda8_4WRpOy-5" value="&lt;b&gt;Ruby backend&lt;/b&gt;&lt;br&gt;Backend containing DB + Frontend" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;align=center;verticalAlign=top;" parent="0uubkKYT0Fda8_4WRpOy-15" vertex="1">
-          <mxGeometry width="280" height="300" as="geometry" />
+          <mxGeometry width="232.64270613107823" height="285.8490566037736" as="geometry" />
         </mxCell>
         <mxCell id="0uubkKYT0Fda8_4WRpOy-7" value="ReactJS Frontend" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;align=center;dashed=1;" parent="0uubkKYT0Fda8_4WRpOy-15" vertex="1">
-          <mxGeometry x="35" y="200" width="210" height="70" as="geometry" />
+          <mxGeometry x="29.08033826638478" y="190.56603773584905" width="174.48202959830866" height="66.69811320754717" as="geometry" />
         </mxCell>
         <mxCell id="0uubkKYT0Fda8_4WRpOy-14" value="PostgreSQL DB" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;align=center;dashed=1;" parent="0uubkKYT0Fda8_4WRpOy-15" vertex="1">
-          <mxGeometry x="35" y="115" width="210" height="70" as="geometry" />
+          <mxGeometry x="29.08033826638478" y="109.5754716981132" width="174.48202959830866" height="66.69811320754717" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
