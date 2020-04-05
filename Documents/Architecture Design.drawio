@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-05T11:54:00.839Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="r0VvU_7jfR41r-Bx_6z4" version="12.9.7" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-05T12:07:53.500Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36" etag="dDgRVfCTiO0GasHDvWWn" version="12.9.7" type="github">
   <diagram id="VWcXcDjhsZNNLfSj0849" name="Page-1">
-    <mxGraphModel dx="1780" dy="1259" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="734" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="UJD4E74rFWZH42VuNUKB-3" value="&lt;b&gt;Postgres SQL&lt;/b&gt;&lt;br&gt;Database&lt;br&gt;Data storage" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;" vertex="1" parent="1">
           <mxGeometry x="535.7866807610993" y="129.99773584905665" width="210.20930232558138" height="114.33962264150944" as="geometry" />
         </mxCell>
-        <mxCell id="UJD4E74rFWZH42VuNUKB-4" value="&lt;b&gt;Ruby on Rails&lt;/b&gt;&lt;br&gt;Backend&lt;br&gt;&lt;br&gt;API Endpoints&lt;br&gt;&lt;br&gt;Session management using JWT&lt;br&gt;&lt;br&gt;Role handling" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="UJD4E74rFWZH42VuNUKB-4" value="&lt;b&gt;Ruby on Rails&lt;/b&gt;&lt;br&gt;Backend&lt;br&gt;&lt;br&gt;API Endpoints&lt;br&gt;&lt;br&gt;Session management using JWT&lt;br&gt;&lt;br&gt;Authorization handling" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="90" y="130" width="230.21" height="410" as="geometry" />
         </mxCell>
         <mxCell id="UJD4E74rFWZH42VuNUKB-5" value="" style="endArrow=classic;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;dashed=1;jumpSize=11;fontSize=11;strokeWidth=4;exitX=1.008;exitY=0.876;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="UJD4E74rFWZH42VuNUKB-4" target="UJD4E74rFWZH42VuNUKB-2">
@@ -35,7 +35,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="UJD4E74rFWZH42VuNUKB-7" value="Generated PDF" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="576.5" y="410" width="69" height="40" as="geometry" />
+          <mxGeometry x="576.5" y="420" width="69" height="50" as="geometry" />
         </mxCell>
         <mxCell id="UJD4E74rFWZH42VuNUKB-9" value="JSON data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="510" y="470" width="54" height="40" as="geometry" />
@@ -56,17 +56,44 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UJD4E74rFWZH42VuNUKB-12" value="DB&lt;br&gt;manipulation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="UJD4E74rFWZH42VuNUKB-12" value="SQL Queries" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="393" y="210" width="74" height="40" as="geometry" />
         </mxCell>
         <mxCell id="UJD4E74rFWZH42VuNUKB-13" value="Data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="410" y="140" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="UJD4E74rFWZH42VuNUKB-14" value="&lt;span style=&quot;font-size: 19px&quot;&gt;&lt;b&gt;Device&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="49" y="830" width="730" height="670" as="geometry" />
+          <mxGeometry x="200" y="830" width="230" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="UJD4E74rFWZH42VuNUKB-15" value="&lt;b&gt;ReactJS&lt;/b&gt;&lt;br&gt;Fronted" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="279.78999999999996" y="960" width="230.21" height="410" as="geometry" />
+        <mxCell id="UJD4E74rFWZH42VuNUKB-15" value="&lt;b&gt;ReactJS&lt;/b&gt;&lt;br&gt;Fronted&lt;br&gt;&lt;br&gt;Responsive design for mobile and desktop&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=21;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="237" y="910" width="156" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UJD4E74rFWZH42VuNUKB-18" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;jumpSize=11;fontSize=11;strokeWidth=4;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="268.9000000000001" y="910" as="sourcePoint" />
+            <mxPoint x="190.0050000000001" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="269" y="790" />
+              <mxPoint x="268.9" y="680" />
+              <mxPoint x="190" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UJD4E74rFWZH42VuNUKB-19" value="JSON data&lt;br&gt;API calls" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="170" y="650" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UJD4E74rFWZH42VuNUKB-22" value="" style="endArrow=classic;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;dashed=1;jumpSize=11;fontSize=11;strokeWidth=4;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="UJD4E74rFWZH42VuNUKB-4" target="UJD4E74rFWZH42VuNUKB-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="278.9000000000001" y="920" as="sourcePoint" />
+            <mxPoint x="200.0050000000001" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="263" y="620" />
+              <mxPoint x="354" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UJD4E74rFWZH42VuNUKB-21" value="JSON data&lt;br&gt;JWT&lt;br&gt;PDF&lt;br&gt;HTML/CSS/JS" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="303" y="650" width="90" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
